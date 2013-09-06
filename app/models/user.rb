@@ -1,9 +1,5 @@
 class User < ActiveRecord::Base
-  # has_secure_password
-
-  # params.require(:user).permit(:email, :password, :password_confirmation)
-
-  # attr_accessible :email, :password, :password_confirmation
-
-  # validates_uniqueness_of :email
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 end
