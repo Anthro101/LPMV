@@ -9,22 +9,22 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
 <body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <nav>
-          <ul class="nav pull-right">
-            <li><%= link_to "Home", '/static_pages/home' %></li>
-            <li><%= link_to "About", '/static_pages/about' %></li>
-            <li><%= link_to "Sign in", '#' %></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+  <header role="banner">
+    <nav>
+      <ul role="navigation">
+        <li><%= link_to "Home", '/static_pages/home' %></li>
+        <li><%= link_to "About", '/static_pages/about' %></li>
+        <li><%= link_to "Sign in", '#' %></li>
+      </ul>
+    </nav>
   </header>
-  <div class="container">
-    <%= yield %>
+
+  <div class="main_content">
+    <main role="main">
+      <%= yield %>
+    </main>
   </div>
-  </body>
+</body>
 </html>
